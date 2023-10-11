@@ -1,5 +1,6 @@
 import React from "react";
 import { banner } from "../data";
+import bannerHome from "../assets/Img/bannerHome.png"
 
 const Banner = () => {
   //destructuring
@@ -33,11 +34,12 @@ const Banner = () => {
             </button>
           </div>
 
-          <div
+          <img
             className="image bg-blue-300 w-full h-full bg-banner bg-cover bg-right absolute right-0 lg:relative lg:bg-center bg-no-repeat flex-1"
             data-aos="fade-down"
             data-aos-delay="900"
-          ></div>
+            src={bannerHome}
+          />
         </div>
       </div>
     </section>
