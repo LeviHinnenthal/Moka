@@ -1,8 +1,5 @@
 import { React, useState } from "react";
-import { nav } from "../data";
-import Scroll from "react-scroll";
 import { Link } from "react-scroll";
-import Join from "./Join";
 
 const Nav = () => {
 
@@ -13,53 +10,46 @@ const Nav = () => {
     <nav className="hidden lg:flex ">
       <ul className="flex ">
         <Link
-          className="text-white mx-4 font-medium cursor-pointer hover:text-primary-200"
-          to="Home"
+          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          to="productos"
           smooth
           duration={500}
         >
-          Home
+          Productos
         </Link>
         <Link
-          className="text-white mx-4 font-medium cursor-pointer hover:text-primary-200"
-          to="About"
+          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          to="nosotros"
           smooth
           duration={500}
         >
-          About
+          Nosotros
         </Link>
         <Link
-          className="text-white mx-4 font-medium cursor-pointer hover:text-primary-200"
-          to="Workouts"
+          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          to="testimonios"
           smooth
           duration={500}
         >
-          Workouts
+          Testimonios
         </Link>
         <Link
-          className="text-white mx-4 font-medium cursor-pointer hover:text-primary-200"
-          to="Pricing"
+          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          to="mapa"
           smooth
           duration={500}
         >
-          Pricing
+          Mapa
         </Link>
         <Link
-          className="text-white mx-4 font-medium cursor-pointer hover:text-primary-200"
-          to="Community"
+          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          to="preguntas-frecuentes"
           smooth
           duration={500}
         >
-          Community
+          Preguntas frecuentes
         </Link>
-        <Link
-          className="text-white mx-4 font-medium cursor-pointer hover:text-primary-200"
-          to="Faq"
-          smooth
-          duration={500}
-        >
-          FAQ
-        </Link>
+      
       </ul>
     </nav>
   );

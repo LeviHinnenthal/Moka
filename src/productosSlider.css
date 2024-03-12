@@ -1,15 +1,15 @@
-.workoutSlider .swiper-wrapper {
+.productosSlider .swiper-wrapper {
     height: 450px;
     /* background: pink; */
   }
   
-  .workoutSlider .swiper-button-prev::after,
-  .workoutSlider .swiper-button-next::after {
+  .productosSlider .swiper-button-prev::after,
+  .productosSlider .swiper-button-next::after {
     content: '';
   }
   
-  .workoutSlider .swiper-button-prev,
-  .workoutSlider .swiper-button-next {
+  .productosSlider .swiper-button-prev,
+  .productosSlider .swiper-button-next {
     top: 96%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,25 +17,25 @@
     height: 36px;
   }
   
-  .workoutSlider .swiper-button-prev {
+  .productosSlider .swiper-button-prev {
     left: 88.4%;
     background-image: url('../src/assets/img/chevron-left.svg');
   }
   
-  .workoutSlider .swiper-button-next {
+  .productosSlider .swiper-button-next {
     background-image: url('../src/assets/img/chevron-right.svg');
     right: 66px;
   }
   
   @media (max-width: 1300px) {
-    .workoutSlider .swiper {
+    .productosSlider .swiper {
       height: auto;
     }
-    .workoutSlider .swiper-wrapper {
+    .productosSlider .swiper-wrapper {
       height: 50vw;
     }
-    .workoutSlider .swiper-button-prev,
-    .workoutSlider .swiper-button-next {
+    .productosSlider .swiper-button-prev,
+    .productosSlider .swiper-button-next {
       display: none;
     }
   }

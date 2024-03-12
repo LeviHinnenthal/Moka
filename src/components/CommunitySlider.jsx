@@ -8,7 +8,7 @@ import "swiper/css/free-mode";
 
 import "swiper/css/effect-cards";
 
-import "../workoutSlider.css";
+import "../ProductosSlider.css";
 
 import { community } from "../data";
 

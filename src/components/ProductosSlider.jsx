@@ -6,11 +6,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
-import "../workoutSlider.css";
+import "../ProductosSlider.css";
 
 import { Navigation, Pagination, FreeMode } from "swiper/modules";
 
-const WorkoutSlider = () => {
+const ProductosSlider = () => {
   //destr
   const { progrmas } = workouts;
   return (
@@ -31,7 +31,7 @@ const WorkoutSlider = () => {
         },
       }}
       modules={[Navigation, FreeMode]}
-      className="workoutSlider"
+      className="ProductosSlider"
     >
       {progrmas.map((program, id) => {
         //destr
@@ -53,4 +53,4 @@ const WorkoutSlider = () => {
   );
 };
 
-export default WorkoutSlider;
+export default ProductosSlider;

@@ -6,7 +6,7 @@ const Faq = () => {
   const { icon, title, accordions } = faq;
   return (
     <div id="Faq" className="bg-white -mt-1 pb-32">
-      <div className="max-w-[1000px] mx-auto min-h-[600px] bg-faq bg-no-repeat bg-center bg-contain">
+      <div className="max-w-[1000px] mx-auto min-h-[600px]">
         <div
           className="section-title-group max-w-[540px] py-[30px] mb-0 mx-auto px-4 lg:px0"
           data-aos="fade-up"
