@@ -1,6 +1,6 @@
 import React from "react";
+import { useProducts } from "../api/useProducts";
 
-import { workouts } from "../data";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,11 +8,15 @@ import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import "../ProductosSlider.css";
 
+
 import { Navigation, Pagination, FreeMode } from "swiper/modules";
+import { useParams } from "react-router-dom";
 
 const ProductosSlider = () => {
-  //destr
-  const { progrmas } = workouts;
+  const { categories, products, setSearchTerm, setCategoryFilter, loading } =
+    useProducts();
+  const { category } = useParams(); // Agrega esta línea para obtener el parámetro de la URL
+
   return (
     <Swiper
       slidesPerView={2}
@@ -23,7 +27,7 @@ const ProductosSlider = () => {
       breakpoints={{
         768: {
           slidesPerView: 3,
-          freeMode:true,
+          freeMode: true,
         },
         1024: {
           slidesPerView: 4,
@@ -33,18 +37,21 @@ const ProductosSlider = () => {
       modules={[Navigation, FreeMode]}
       className="ProductosSlider"
     >
-      {progrmas.map((program, id) => {
-        //destr
-        const { image, name } = program;
-
+      {products.map((product) => {
         return (
           <SwiperSlide
             className="max-w-[400px] max-h-[400px] relative"
-            key={id}
+            key={product.id}
           >
-            <img className="w-full h-full object-cover rounded-md" src={image} alt="" />
-            <div className="absolute left-[20px] bottom-[20px] z-1 bg-white text-black px-4 py-1 rounded-md">
-              <div>{name}</div>
+            <img
+              className="w-full h-full"
+              src={product.imageURL}
+              alt={product.imageURL}
+            />
+            <div className="text-black px-4 py-1 rounded-md">
+              <div>{product.name}</div>
+              <div>{product.description}</div>
+              <div>{product.price}</div>
             </div>
           </SwiperSlide>
         );

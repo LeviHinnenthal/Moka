@@ -7,7 +7,7 @@ const Community = () => {
   // destr
   const { icon, title, testimonials } = community;
   return (
-    <div id="Community" className="w-full bg-white -mt-1 pt-10 lg:pt-18">
+    <div id="Community" className="container mx-auto px-6 md:px-16 bg-white -mt-1 pt-10 lg:pt-18">
       <section className="section mx-auto">
         <div
           className="section-title-group"

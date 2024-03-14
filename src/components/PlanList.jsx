@@ -8,7 +8,7 @@ const PlanList = ({ plans }) => {
 
   return (
     <div
-      className="flex flex-col items-center lg:flex-row mx-6"
+      className="flex flex-col items-center lg:flex-row"
       data-aos="fade-up"
       data-aos-offset="200"
     >

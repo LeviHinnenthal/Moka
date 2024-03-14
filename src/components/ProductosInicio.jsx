@@ -1,14 +1,11 @@
 import React from "react";
-import { nav, workouts } from "../data";
-
 import ProductosSlider from "./ProductosSlider";
 
 const ProductosInicio = () => {
-  //dest
-  const { title, icon } = workouts;
+
 
   return (
-    <div id="Workouts" className="w-full bg-white -mt-1">
+    <div id="productos" className="container mx-auto px-6 md:px-16 bg-white -mt-1">
       <section className="py-14  mx-auto">
         <div
           className="section-title-group max-w-[540px] mx-auto px-4 lg:px0"

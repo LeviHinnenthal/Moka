@@ -1,5 +1,7 @@
 import { React, useState } from "react";
 import { Link } from "react-scroll";
+import keyframesCss from "../../src/keyframesCss.css";
+
 
 const Nav = () => {
 
@@ -10,7 +12,7 @@ const Nav = () => {
     <nav className="hidden lg:flex ">
       <ul className="flex ">
         <Link
-          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          className="text-black mx-4 font-medium cursor-pointer line-effect relative hover:text-black"
           to="productos"
           smooth
           duration={500}
@@ -18,7 +20,7 @@ const Nav = () => {
           Productos
         </Link>
         <Link
-          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          className="text-black mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
           to="nosotros"
           smooth
           duration={500}
@@ -26,7 +28,7 @@ const Nav = () => {
           Nosotros
         </Link>
         <Link
-          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          className="text-black mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
           to="testimonios"
           smooth
           duration={500}
@@ -34,7 +36,7 @@ const Nav = () => {
           Testimonios
         </Link>
         <Link
-          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          className="text-black mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
           to="mapa"
           smooth
           duration={500}
@@ -42,7 +44,7 @@ const Nav = () => {
           Mapa
         </Link>
         <Link
-          className="text-black mx-4 font-medium cursor-pointer hover:text-black"
+          className="text-black mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
           to="preguntas-frecuentes"
           smooth
           duration={500}
