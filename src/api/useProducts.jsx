@@ -20,6 +20,15 @@ export const useProducts = () => {
         id: doc.id,
         ...doc.data(),
       }));
+
+      // Extraer todas las categorías únicas de los productos
+      const uniqueCategories = [
+        ...new Set(productsData.flatMap((product) => product.etiquetas)),
+      ];
+
+      // Actualizar el estado de categories con las categorías únicas
+      setCategories(uniqueCategories);
+
       setProducts(productsData);
       console.log("Productos actualizados:", productsData);
     } catch (error) {
@@ -42,13 +51,16 @@ export const useProducts = () => {
 
     if (searchTerm) {
       filteredProducts = filteredProducts.filter((product) =>
-        product.title.toLowerCase().includes(searchTerm.toLowerCase())
+        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-
+    
     if (categoryFilter) {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.title.toLowerCase() === categoryFilter.toLowerCase()
+      filteredProducts = filteredProducts.filter((product) =>
+        product.etiquetas.some(
+          (etiqueta) => etiqueta.toLowerCase() === categoryFilter.toLowerCase()
+        )
       );
     }
 

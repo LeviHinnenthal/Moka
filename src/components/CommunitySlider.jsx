@@ -10,8 +10,6 @@ import "swiper/css/effect-cards";
 
 import "../ProductosSlider.css";
 
-import { community } from "../data";
-
 import { Navigation, Pagination, FreeMode } from "swiper/modules";
 
 const CommunitySlider = () => {
@@ -19,8 +17,7 @@ const CommunitySlider = () => {
   if (window.innerWidth < 768) {
     mobile = "cards";
   }
-  //destr
-  const { testimonials } = community;
+
   return (
     <Swiper
       effect={mobile}
@@ -43,9 +40,6 @@ const CommunitySlider = () => {
       }}
     >
       {testimonials.map((testimonial, id) => {
-        //destr
-        const { name, image, message } = testimonial;
-
         return (
           <SwiperSlide key={id} className="">
             <div className="">

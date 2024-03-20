@@ -5,15 +5,15 @@ const ProductosInicio = () => {
 
 
   return (
-    <div id="productos" className="container mx-auto px-6 md:px-16 bg-white -mt-1">
+    <div id="productos" className="container w-[90%] min-h-[400px] h-auto mx-auto bg-white">
       <section className="py-14  mx-auto">
         <div
-          className="section-title-group max-w-[540px] mx-auto px-4 lg:px0"
+          className="mb-8 mt-12"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <h2 className="h2 section-title">
-            Productos <span className="text-primary-200">.</span>
+          <h2 className="text-[35px] font-medium text-[#51534A]">
+            Nuestros poductos
           </h2>
         </div>
         <div>

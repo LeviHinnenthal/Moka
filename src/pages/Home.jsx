@@ -1,10 +1,10 @@
 import React from "react";
 import Banner from "../components/Banner";
 import About from "../components/About";
-import Pricing from "../components/Pricing";
-import Community from "../components/Community";
 import Faq from "../components/Faq";
 import ProductosInicio from "../components/ProductosInicio";
+import Protagonistas from "../components/Protagonistas";
+import Envios from "../components/Envios";
 
 const Home = () => {
   return (
@@ -12,8 +12,8 @@ const Home = () => {
       <Banner />
       <ProductosInicio />
       <About />
-      <Pricing />
-      <Community />
+      <Protagonistas />
+      <Envios />
       <Faq />
     </>
   );
