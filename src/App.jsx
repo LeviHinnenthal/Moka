@@ -12,8 +12,6 @@ import Login from "./components/Login";
 import { auth } from "./firebaseConfig";
 import Admin from "./pages/Admin";
 import Cart from "./pages/Cart";
-import Productos from "./pages/Productos";
-import ProductoDetallePage from "./pages/ProductoDetallePage"; // Importa el componente de detalle del producto
 import CheckoutForm from "./components/CheckoutForm";
 import Home from "./pages/Home";
 
@@ -50,12 +48,6 @@ const App = () => {
             path="/admin"
             element={user ? <Admin /> : <Navigate to="/login" />}
           />
-          <Route path="/productos" element={<Productos />} />
-          <Route
-            path="/productos/:slug"
-            element={<ProductoDetallePage />}
-          />{" "}
-          {/* Ruta para el detalle del producto */}
           <Route path="/login" element={<Login />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<CheckoutForm />} />

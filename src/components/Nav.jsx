@@ -1,7 +1,6 @@
 import { React, useState } from "react";
 import { Link } from "react-scroll";
 import keyframesCss from "../../src/keyframesCss.css";
-import Productos from "../pages/Productos";
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
