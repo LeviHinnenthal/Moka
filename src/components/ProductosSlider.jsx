@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
-import "../ProductosSlider.css";
 import { Navigation, Pagination } from "swiper/modules";
 import cat1 from "../assets/Img/cat1.png";
 import cat2 from "../assets/Img/cat2.png";
@@ -173,8 +172,10 @@ const ProductosSlider = () => {
         }`}
       >
         {products
-          .filter((product) =>
-            product.etiquetas.some((etiqueta) => etiqueta === catId) && product.active === "1"
+          .filter(
+            (product) =>
+              product.etiquetas.some((etiqueta) => etiqueta === catId) &&
+              product.active === "1"
           )
           .map((product, id) => (
             <div
@@ -210,7 +211,7 @@ const ProductosSlider = () => {
               Cerrar
             </button>
             <div className="flex flex-col sm:flex-row justify-center items-center h-full relative">
-              <div className="w-full sm:w-1/2 mt-10 sm:mt-0 flex flex-col justify-between">
+              <div className="w-full sm:w-1/2 h-3/4 mt-10 sm:mt-0 flex flex-col justify-between">
                 <Swiper
                   navigation={true}
                   pagination={true}
@@ -225,8 +226,12 @@ const ProductosSlider = () => {
                 </Swiper>
               </div>
               <div className="w-[83%] sm:w-[45%] mr-10% sm:mr-[5%] h-full mt-6 sm:mt-0 flex flex-col justify-center items-start">
-                <p className="text-3xl mb-4 text-[#4E454C] font-bold">{selectedProduct.name}</p>
-                <p className="text-xl font-semibold text-[#4E454C] mb-2">Incluye:</p>
+                <p className="text-3xl mb-4 text-[#4E454C] font-bold">
+                  {selectedProduct.name}
+                </p>
+                <p className="text-xl font-semibold text-[#4E454C] mb-2">
+                  Incluye:
+                </p>
                 <p className="text-md sm:text-lg text-[#51534A] mb-4">
                   {selectedProduct.description}
                 </p>

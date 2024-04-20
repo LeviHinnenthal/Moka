@@ -8,7 +8,6 @@ import "swiper/css/free-mode";
 
 import "swiper/css/effect-cards";
 
-import "../ProductosSlider.css";
 
 import { Navigation, Pagination, FreeMode } from "swiper/modules";
 

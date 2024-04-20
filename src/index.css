@@ -94,3 +94,45 @@
 #root{
   background-color: #131316;
 }
+
+.productosSlider .swiper-wrapper {
+  height: 450px;
+  /* background: pink; */
+}
+
+.productosSlider .swiper-button-prev::after,
+.productosSlider .swiper-button-next::after {
+  content: '';
+}
+
+.productosSlider .swiper-button-prev,
+.productosSlider .swiper-button-next {
+  top: 96%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 36px;
+  height: 36px;
+}
+
+.productosSlider .swiper-button-prev {
+  left: 88.4%;
+  background-image: url('../src/assets/img/chevron-left.svg');
+}
+
+.productosSlider .swiper-button-next {
+  background-image: url('../src/assets/img/chevron-right.svg');
+  right: 66px;
+}
+
+@media (max-width: 1300px) {
+  .productosSlider .swiper {
+    height: auto;
+  }
+  .productosSlider .swiper-wrapper {
+    height: 50vw;
+  }
+  .productosSlider .swiper-button-prev,
+  .productosSlider .swiper-button-next {
+    display: none;
+  }
+}

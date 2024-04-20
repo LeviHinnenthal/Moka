@@ -8,7 +8,7 @@ import about3 from "../assets/Img/nuestraHistoria1.png";
 const About = () => {
   return (
     <section id="nosotros" className="bg-white w-full py-10 sm:py-20">
-      <h2 className="sm:text-[35px] text-[20px] font-medium text-[#51534A] mb-6 sm:mb-0 ml-6 sm:ml-16">
+      <h2 className="sm:text-[35px] w-fit text-[20px] font-medium text-[#51534A] mb-6 sm:mb-0 ml-6 sm:ml-[7vw]">
         Nuestra historia
       </h2>
 
