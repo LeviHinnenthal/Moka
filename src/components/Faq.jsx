@@ -1,10 +1,11 @@
-import React from "react";
 import Acordion from "./Acordion";
 
+
 const Faq = () => {
+ 
   return (
     <div id="preguntas-frecuentes" className="bg-white w-[90%] mx-auto mb-20">
-      <h2 className="text-[35px] font-medium mb-10 text-[#51534A]">
+      <h2 className="sm:text-[35px] text-[20px] font-medium text-[#51534A] mt-10 sm:mt-0 mb-4 sm:mb-10">
         Preguntas frecuentes
       </h2>
 

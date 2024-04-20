@@ -29,3 +29,4 @@ export const getProducts = async (category = null) => {
     throw error; // Puedes manejar el error aquí o dejar que se propague
   }
 };
+ /// NO SE USA!!!

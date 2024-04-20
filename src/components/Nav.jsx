@@ -4,25 +4,20 @@ import keyframesCss from "../../src/keyframesCss.css";
 import Productos from "../pages/Productos";
 import { NavLink } from "react-router-dom";
 
-
 const Nav = () => {
-
-
- 
-
   return (
     <nav className="hidden lg:flex ">
       <ul className="flex ">
-        <NavLink
-          className="text-[#51534A] mx-4 font-medium cursor-pointer line-effect relative hover:text-black"
-          to="/productos"
+        <Link
+          className="text-[#4E454C] mx-4 font-medium cursor-pointer line-effect relative hover:text-black"
+          to="productos"
           smooth
           duration={500}
         >
           Productos
-        </NavLink>
+        </Link>
         <Link
-          className="text-[#51534A] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
+          className="text-[#4E454C] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
           to="nosotros"
           smooth
           duration={500}
@@ -30,15 +25,15 @@ const Nav = () => {
           Nosotros
         </Link>
         <Link
-          className="text-[#51534A] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
-          to="testimonios"
+          className="text-[#4E454C] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
+          to="opiniones"
           smooth
           duration={500}
         >
-          Testimonios
+          Opiniones
         </Link>
         <Link
-          className="text-[#51534A] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
+          className="text-[#4E454C] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
           to="mapa"
           smooth
           duration={500}
@@ -46,14 +41,13 @@ const Nav = () => {
           Mapa
         </Link>
         <Link
-          className="text-[#51534A] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
+          className="text-[#4E454C] mx-4 font-medium line-effect relative cursor-pointer hover:text-black"
           to="preguntas-frecuentes"
           smooth
           duration={500}
         >
           Preguntas frecuentes
         </Link>
-      
       </ul>
     </nav>
   );

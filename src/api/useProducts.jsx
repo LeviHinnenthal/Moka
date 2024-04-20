@@ -1,17 +1,17 @@
-// useProducts.js
-
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
 export const useProducts = () => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
+  const [faqs, setFaqs] = useState([]);
+  const [comentarios, setComentarios] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
 
-  const fetchData = async () => {
+  const fetchProducts = async () => {
     setLoading(true);
     try {
       const productsCollection = collection(db, "products");
@@ -21,16 +21,12 @@ export const useProducts = () => {
         ...doc.data(),
       }));
 
-      // Extraer todas las categorías únicas de los productos
       const uniqueCategories = [
         ...new Set(productsData.flatMap((product) => product.etiquetas)),
       ];
 
-      // Actualizar el estado de categories con las categorías únicas
       setCategories(uniqueCategories);
-
       setProducts(productsData);
-      console.log("Productos actualizados:", productsData);
     } catch (error) {
       console.error("Error al obtener productos:", error);
     } finally {
@@ -38,15 +34,67 @@ export const useProducts = () => {
     }
   };
 
+  const fetchFaqs = async () => {
+    setLoading(true);
+    try {
+      const faqsCollection = collection(db, "faqs");
+      const faqsSnapshot = await getDocs(faqsCollection);
+      const faqsData = faqsSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setFaqs(faqsData);
+    } catch (error) {
+      console.error("Error al obtener FAQs:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const fetchComentarios = async () => {
+    setLoading(true);
+    try {
+      const comentariosCollection = collection(db, "comentarios");
+      const comentariosSnapshot = await getDocs(comentariosCollection);
+      const comentariosData = comentariosSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setComentarios(comentariosData);
+    } catch (error) {
+      console.error("Error al obtener comentarios:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
-    fetchData();
+    fetchProducts();
+    fetchFaqs();
+    fetchComentarios(); // Agregamos la llamada para obtener comentarios
   }, []);
 
   const addProduct = (newProduct) => {
     setProducts((prevProducts) => [...prevProducts, newProduct]);
   };
 
-  const applyFilters = () => {
+  const addFaq = (newFaq) => {
+    setFaqs((prevFaqs) => [...prevFaqs, newFaq]);
+  };
+
+  const addComentario = async (newComentario) => {
+    try {
+      await addDoc(collection(db, "comentarios"), newComentario);
+      console.log("Comentario agregado exitosamente");
+      fetchComentarios(); // Refetch para actualizar los datos
+    } catch (error) {
+      console.error("Error al agregar el comentario:", error);
+    }
+  };
+
+  const applyProductFilters = () => {
     let filteredProducts = [...products];
 
     if (searchTerm) {
@@ -69,11 +117,17 @@ export const useProducts = () => {
 
   return {
     categories,
-    products: applyFilters(),
+    products: applyProductFilters(),
+    faqs,
+    comentarios, // Agregamos comentarios al objeto devuelto
     setSearchTerm,
     setCategoryFilter,
-    fetchData,
+    fetchProducts,
+    fetchFaqs,
+    fetchComentarios,
     addProduct,
+    addFaq,
+    addComentario, // Agregamos la función para agregar comentarios
     loading,
   };
 };

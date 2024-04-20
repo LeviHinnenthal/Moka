@@ -50,9 +50,9 @@ const CheckoutForm = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h2 className="text-2xl font-bold mb-4">Información de Compra</h2>
-      <form className="space-y-4 flex flex-col">
+    <div className="flex flex-col items-start justify-start ml-[5%] sm:ml-0 w-[90%] sm:w-1/2 mb-10">
+      <h2 className="text-2xl font-bold mb-4 w-full p-4">Información de Compra</h2>
+      <form className="space-y-4 flex flex-col w-full p-4">
         <input
           type="text"
           value={nombreEncargado}
@@ -70,9 +70,10 @@ const CheckoutForm = () => {
           required
         />
         <div className="flex items-center">
-          <label className="mr-2">
+          <label className="mr-4">
             Envío: Sí
             <input
+            className="ml-2"
               type="checkbox"
               checked={envio}
               onChange={() => setEnvio(true)}
@@ -81,6 +82,7 @@ const CheckoutForm = () => {
           <label>
             Envío: No
             <input
+              className="ml-2"
               type="checkbox"
               checked={!envio}
               onChange={() => setEnvio(false)}
@@ -134,11 +136,11 @@ const CheckoutForm = () => {
         </select>
       </form>
 
-      <div className="flex items-center justify-center mt-8">
+      <div className="flex items-center justify-center mt-8 ml-4">
         <p className="text-lg font-bold mr-10">Total: ${totalCompra}</p>
         <button
           onClick={handleFinalizarCompra}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-black hover:bg-[#00000090] text-white font-bold py-2 px-4 rounded"
         >
           Finalizar Compra
         </button>

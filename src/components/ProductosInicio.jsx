@@ -6,13 +6,13 @@ const ProductosInicio = () => {
 
   return (
     <div id="productos" className="container w-[90%] min-h-[400px] h-auto mx-auto bg-white">
-      <section className="py-14  mx-auto">
+      <section className="mx-auto">
         <div
-          className="mb-8 mt-12"
+          className="sm:mb-8 mb-4 mt-6 sm:mt-12"
           data-aos="fade-up"
           data-aos-delay="200"
         >
-          <h2 className="text-[35px] font-medium text-[#51534A]">
+          <h2 className="sm:text-[35px] text-[20px] font-medium text-[#51534A]">
             Nuestros poductos
           </h2>
         </div>
