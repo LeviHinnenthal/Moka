@@ -15,7 +15,8 @@ import Cart from "./pages/Cart";
 import Productos from "./pages/Productos";
 import ProductoDetallePage from "./pages/ProductoDetallePage"; // Importa el componente de detalle del producto
 import CheckoutForm from "./components/CheckoutForm";
-import Home from "./pages/home";
+import Home from "./pages/Home";
+
 
 
 const App = () => {

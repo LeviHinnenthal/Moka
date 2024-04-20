@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../assets/Img/logo.png";
 import { Link } from "react-router-dom";
-import Home from "../pages/home";
+
 const Footer = () => {
   return (
     <a href="/" className="flex justify-between border-t-1 items-center w-full  md:py- 6-3 px-4 md:py-6 md:px-10 items-cente">
