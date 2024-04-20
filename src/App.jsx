@@ -7,7 +7,6 @@ import { ToastContainer } from "react-toastify"; // Importar ToastContainer desd
 import "react-toastify/dist/ReactToastify.css"; // Importar estilos CSS para ToastContainer
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Home from "./pages/home";
 import NoPage from "./components/NoPage";
 import Login from "./components/Login";
 import { auth } from "./firebaseConfig";
@@ -16,6 +15,7 @@ import Cart from "./pages/Cart";
 import Productos from "./pages/Productos";
 import ProductoDetallePage from "./pages/ProductoDetallePage"; // Importa el componente de detalle del producto
 import CheckoutForm from "./components/CheckoutForm";
+import Home from "./pages/home";
 
 
 const App = () => {
